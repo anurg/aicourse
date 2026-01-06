@@ -21,9 +21,27 @@
 # print((lambda x,y : x * y) (5,4))
 
 # ## Closure like in JS
-def make_adder(n):
-    return lambda x: x+n
-adder_3 = make_adder(3)
-adder_5 = make_adder(5)
-print(adder_3(10))
-print(adder_5(10))
+# def make_adder(n):
+#     return lambda x: x+n
+# adder_3 = make_adder(3)
+# adder_5 = make_adder(5)
+# print(adder_3(10))
+# print(adder_5(10))
+# age = 18
+# print('kid' if age<18 else 'adult')
+
+# # args (arguments)
+# def fruits(*args):
+#     for fruit in args:
+#         print(fruit)
+# fruits("Apple","Guava","Mango")
+
+# kwargs (key word arguments)
+# def veg(**kwargs):
+#     for key,value in kwargs.items():
+#         print("{}:{}".format(key,value))
+# if __name__=="__main__":
+#     veg(name="Tomoato",color="Red",weight=5.5)
+
+import veg
+veg.veg(name="Potato",color="Brown", Size="Medium")
