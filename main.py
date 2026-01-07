@@ -84,4 +84,64 @@
 # sum=reduce(lambda acc,b:acc+b[1],expenses,0)
 # print(sum)
 
-#### Enums in Python
+# #### Enums in Python
+# from enum import Enum
+# class State(Enum):
+#     ACTIVE = 1
+#     INACTIVE = 0
+# member = State.ACTIVE
+# print(member)
+# print(repr(member))
+# print(repr(member.name))
+# print(repr(member.value))
+
+# print([s.name for s in State])
+# print([s.value for s in State])
+
+# # Closure - The state of function is still alive even when the function is not longer referenced
+# def counter():
+#     count =0
+
+#     def increment():
+#         nonlocal count
+#         count +=1
+#         return count
+#     return increment
+# counter_1 = counter()
+# counter_2 = counter()
+
+# print(counter_1())
+# print(counter_2())
+# print(counter_1())
+# print(counter_1())
+# print(counter_2())
+
+#### Objects
+# age = 51
+# print(age.real)
+# print(age.imag)
+# print(age.bit_length())
+# print(age.bit_count())
+
+# l = [2,8]
+# l.append(15)
+# l.pop()
+# print(l)
+# print(id(l))
+
+# ##### Class and Inheritence
+# class Animal:
+#     def walk(self):
+#         print("Walking..!")
+# class Dog(Animal):
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+#     def bark(self):
+#         print("woof")
+
+# roger = Dog("Roger",7)
+# roger.bark()
+# roger.walk()
+# print(roger.name)
+# print(roger.age)
