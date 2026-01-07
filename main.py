@@ -43,5 +43,45 @@
 # if __name__=="__main__":
 #     veg(name="Tomoato",color="Red",weight=5.5)
 
-import veg
-veg.veg(name="Potato",color="Brown", Size="Medium")
+# # importing scripts and running individual scripts tests when running standalone
+# import veg
+# veg.veg(name="Potato",color="Brown", Size="Medium")
+
+# #  map, filter,reduce
+# l = [1,2,3,4]
+# # # using lambda function
+# # newl = map(lambda x:2 * x, l)
+# # print(list(newl))
+# # using normal function
+# def nDouble(x):
+#     return 2 * x
+# newl = map(nDouble,l)
+# print(list(newl))
+# # filter
+# l = [1,2,3,4]
+# # def is_even(x):
+# #     return x % 2 ==0
+# # evenl= filter(is_even , l)
+# evenl= filter(lambda x:x%2==0 , l)
+# print(list(evenl))
+# print(l)
+
+# #reduce
+# # Without reduce
+# expenses = [
+#     ("Dinner",100),
+#     ("Car Repir",80),
+#     ("Outing",180),
+#     ("Party",53),
+# ]
+# # sum=0
+# # for expense in expenses:
+# #     sum +=expense[1]
+# # print(sum)
+
+# # With reduce
+# from functools import reduce
+# sum=reduce(lambda acc,b:acc+b[1],expenses,0)
+# print(sum)
+
+#### Enums in Python
