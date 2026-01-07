@@ -145,3 +145,6 @@
 # roger.walk()
 # print(roger.name)
 # print(roger.age)
+
+# Polymorphism
+
