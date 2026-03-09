@@ -1,0 +1,19 @@
+
+======================================================================
+import pandas as pd
+
+#sample data (dictionary)
+data={'X':[1,2,3,4,5],'Y':[5,7,3,9,1]}
+
+#Creating a Dataframe from a dictionary
+df=pd.DataFrame(data)
+print(df)
+
+#Calculate the correlation coefficient
+correlation_coefficient=df['X'].corr(df['Y'])
+
+print("Correlation Coefficient(r):",correlation_coefficient)
+=========================================================================
+o/p:
+
+Correlation Coefficient(r):-0.3

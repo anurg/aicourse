@@ -1,0 +1,290 @@
+              
+           Statistical Analysis:
+          ---------------------
+
+-Statistical analysis is an approach to do analysis and predictions
+
+ Statistical analysis: 2 Types
+ 
+ 1.Descriptive Statistics: Analysis over entire data
+                           If data is already available
+                           we go for descriptive statistics
+
+
+
+ 2.Inferential Statistics :Analysis over sample set and come to the conclusion
+                           over entire data
+
+                           If data is not available,we collect sample sets
+                           and do analysis and come to conclusion over entire data
+
+===============================================================================
+
+ex: a interview
+    If already data(performance) is available--->performs analysis and predict
+                                                 your status
+
+    Round1---->5/10
+    Round2---->4/10
+    Round3---->6/10
+
+   Certificates
+   percentages
+   based on all the above performances---->analysis is done 
+
+
+  If nothing, no data is avaiable about the candidate
+
+  create samples
+  sample Questions will be asked
+   
+  the bigger the samples---->higher the confidence
+
+  with 5 Questions------>confidence level is 10%
+
+  with 10Questions------>confidence level is 20%
+
+  with 20Questions ----->Condfidence level is 60%
+
+  with 30 question------>confidence level is 80%
+
+=============================================================================
+#ex:
+    why we go for samples or sample set??
+
+    why cant we do analysis over entire data
+
+  means if it is not possible to do analysis over entire data,go for samples
+  or if it is too costly to get the entire data---->go for samples
+     and also due to incorrect data(hesitation to say)
+     and also answers are not believable  ex: in interview-->Are you fake?
+                                              Are you Arrested?
+
+ex:Avg weight of Hyderabad females b/w the age group of 20 to 40yrs
+
+  -Its too difficult to collect the entire data
+  -It's too costly
+  -incorrect data
+
+  go for samlesets
+
+  F1------>50
+  F2------>55 --->here 3 samples-->avg wt=50
+  F3------>45
+                 confidence(prediction level)---->10%
+
+ F1,F2.......F100 --->avg wt=55
+                  confidence (prediction level)--->30%
+
+ F1,F2.......F500--->avg wt=57
+                   confidence (prediction level)--->60%
+
+ F1,F2.......F1000-->avg wt=59
+                   confidence (prediction level)--->80%
+
+ 
+ex:3
+
+     small datasets--->predictions may go wrong
+
+        set-1                      Set-2
+        salaries                   
+        A----->10k--->lowest       A--->10k---->lowest
+        B----->20K                 B---->20k
+        C----->60K--->highest      C---->60k     
+                                   .
+                                   .
+                                   X-->90k
+                                   Y-->95k------>highest
+
+==============================================================================
+Statistical analysis--->Categorized into two
+
+1)Uni-variate Analysis :Analysis over a Single variable
+
+2)Multi-variate Analysis :Analysis over multiple variables
+
+Univariate Analysis:
+  ex:1  Sachin,based on his records, is the best player---->univariate
+
+  ex:2  Kohli and Rohith, who is the best player
+        here 2 variables---->but still univariate
+
+       ex: kohli ---->70,60,75,80---->avg=70 i.e avg scores near to 70
+
+           Rohith---->90,85,95,80---->avg=85 i.e avg scores near to 85
+
+       here univariate bcoz avg performed on single variable seperately
+       and then compared
+  
+      avg not performed on both variables
+
+     here the statistical approach is avg
+
+    what is the average of both--->75 --->multi-variate
+
+===============================================================================
+
+multi-variate analysis:  Analysis over multiple variables
+-----------------------
+
+ex:    temp    sales(cool drinks)
+         25      30k
+         27      32k
+         29      34k
+         31      36k
+         33      38k
+
+   if temp=35 sales=? ---above 38k
+
+   This is multivariate analysis
+
+   dependecy b/w the 2 variables
+
+   Here the statistical approach is--->correlation
+                                     i.e correlation(temp,sales)
+
+==============================================================================
+
+Predictive analysis:
+    predictive analysis is a supervised learning requires both i/p variable
+    and target variable.
+Predictive analysis--->catagorized into two
+1)Prediction
+
+2)Forecasting
+
+1)Prediction:  It is predicting a value of a variable based on other variable
+------------  (or) based on i/p variable predicting the value of o/p variable
+
+
+ex:    temp    sales(cool drinks)
+         25      30k
+         27      32k
+         29      34k
+         31      36k
+         33      38k
+
+Here predicting value of sales variable based on temp variable
+
+here temp increases---->sales also increases
+
+
+here sales is dependant
+     temp is independent
+
+sales is dependant on temp but 
+temp is not dependant on sales
+
+Even when sales is zero,still temp will be there
+==============================================================================
+Forecasting : Predicting value of a variable based on same variable
+
+ex: mobile sales of past 5 months
+
+  july--->150sales
+  Aug---->180sales
+  Sep---->185sales
+  oct---->192sales
+  nov---->190sales
+  dec---->?---------->predict--->above 185
+
+  so here predicting value of a variable based on same variable
+  
+  here predicting value of a sales based on sales only
+
+  here i/p variable and target variable is sales only
+  
+ If no dependency----------->Prediction is meaningless
+     
+ for dependency------------->we use correlation
+
+ correlation coefficient represeted as-------->r
+
+ correlation values ranges b/w  -1  to  +1
+
+Correlation analysis:
+--------------------
+ -It is a statistical method that measures the strength and direction
+  of the relationship b/w 2 or more variables 
+
+-It determines how closely they move in the same or opposite direction
+ with the results typically summarized by a correlation coefficient(r)
+ ranging from -1 to +1
+
+
+1) r(x,y)
+     if r=0 ------>0.000000017--->almost zero
+                                        so here no dependency b/w the variables
+
+2) r(x,y)  
+    (i.e r>0) ---->0.45---->positive correlation(x increases,y increases)
+                            if one increases other also increases
+                 ex: if temp increases,sales of cooldrinks also increases
+
+
+3) r(x,y)
+     (i.e r<0) ----> -0.64--->Negative correlation(x increases,y decreases)
+                              if one increases other decreases
+                           ex: if temp increases,sales decreases(sweaters)
+
+
+==============================================================================
+Correlation has 7 values:
+
+1)r=0      No correlation
+
+2)r=1      perfect positive correlation
+
+3)r=-1     perfect Negative correlation
+
+4)r<-0.5   strong negative correlation
+
+5)r>0.5 and r<1 strong positive correlation 
+
+6)r>-0.5 and r<0 weak -ve corrrelation
+
+7)r>0 and r<=0.5 weak positive correlation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

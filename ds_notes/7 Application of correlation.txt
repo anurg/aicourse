@@ -1,0 +1,24 @@
+
+Application of correlation Analysis:
+-----------------------------------
+-It is an important tool helps in better decision making
+
+-enhance predictions
+
+
+Various fields in which it is used are:
+
+1.Economics and finance : relations b/w supply and demand
+
+2.Bussiness Analytics: making better predictions and  better decision makings
+
+3.MArket research and promotions: relation b/w market trends and cusomer behaviour
+
+4.Medical reasearch:relation b/w different symptoms of diseases and understanding
+                    genetic diseases
+
+5.weather forecast: Analyying the correlation b/w diff waeather variables
+
+6.Better customer service: in understanding the customers to increase the
+                           quality of customer service
+
