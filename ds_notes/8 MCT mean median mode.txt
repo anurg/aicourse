@@ -1,0 +1,538 @@
+
+
+Measure of Central Tendency(MCT): 
+
+ MCT  is a Technique to understand the performance of a variable
+ so that we can do some rough estimation about a variable
+
+here we have 3 things:
+
+1.Mean
+2.Median
+3.Mode
+
+1.Mean : Sum of all the values divided by no of values
+
+2.Median: The middle most value when all the values are arranged in Ascending order
+
+3.Mode  : The value which appears most often in the dataset
+==============================================================================
+1)Mean:
+     -can be calculated only for numerical values
+
+    ex: Soccer Tournament---->Total 10 games
+        The lead scorer has scored the goals  as-->8,5,7,5,7,0,1,4,6,5
+     what is the mean score of goals/game?
+     mean=Total goals/no of games
+         =(8+5+7+5+7+0+1+4+6+5)/10
+         =48/10
+         =4.8 ~ 5goals/game
+
+-----------------------------------------------------------------------------
+
+ex: 2 The following table shows the no of road accidents from the past 5 years
+     1.what is the average deaths/year
+     2.what is the average deaths/day
+
+    year   count
+    2021    560
+    2022    610
+    2023   1038
+    2024    750
+    2025    820
+            ----
+            3778
+            ----
+  mean average/year = 3778/5 =755/year
+  mean average/day =  365days x 5years=1825 days
+                   =  3778/1825 
+                   =  2.07 ~ 2deaths/day
+
+For large datasets, it can be easier to summarize the data in a frequency table
+before calculating the mean
+
+ex:
+   soccer Tournament--->5Teams--->10players/Team====>50players Total
+
+  No of goals scored by each player, summarized in a frequency table
+
+ Q)whats the avg no of goals scored per player in the tournament
+
+ Frequncy table
+
+  No of Goals     No of Players
+     0                2
+     1                8
+     2                16
+     3                10
+     4                 6
+     5                 5
+     6                 3
+
+Compute the no of Goals =0x2+1x8+2x16+3x10+4x6+5x5+6x3=137 goals done by 50players
+
+mean average/player =137/50=2.74 ~ 3goals/player
+
+===============================================================================
+mean is of 3 types:
+
+1.Arithmetic mean: here no importance to decimals
+                ex:100.30rs ---->here decimals are negligable
+                ex:weight=70.21->here decimals (.21) is negligable
+
+
+2.Geometric mean : here every decimal is important 
+                ex: 6.42crore-->here decimals (.42) is not negligable-->important
+                ex: height=5.9->here decimals(.9) is not negligable
+
+3.Hormonic mean(Scientific mean): here very minute decimals also are very important
+              ex:chemical compound wt--->c1-->0.179863
+                                         c2-->0.16824
+
+              ex: measile launching----->10:32:27:33 micro seconds are also important
+
+here outliers need to be eliminated
+
+Test match
+Kohli scores are->70,80,60 ->avg=70 Behaviour: most of the scores are near to 70
+
+Kohli scores are->70,80,60,270(outlier)=>avg=120--->Irregular behaviour
+                                                 means most of the scores are
+                                                 not near to 120
+                                                 so remove the outlier in this
+                                                 case to compute the mean
+
+what to be prefered:
+
+Cricket Runs---------->A.M
+RunRate -------------->G.M
+   ex: 5.5
+       5.8
+Gold weight----------->H.M
+Diamond weight-------->H.M
+
+ex:1
+Rohith  avg-75
+Kohli   avg-60
+
+whom to select---->Rohith
+
+ex:2
+Rohith  avg-75
+Kohli   avg-75
+
+who to select--->cant make decision, so go for mode
+
+==============================================================================
+                       _
+Mean of ungrouped data(x)
+  
+     _
+mean(x) =∑xi/N
+        =the sum of all observations divided by the total number of observations
+   here xi is each observation
+
+
+ex: 5 observations--->28,12,18,20,22
+
+mean=(28+12+18+20+22)/5
+    =100/5
+    =20
+==============================================================================
+Mean for Grouped Data:
+
+     _
+mean(x) =∑fixi/∑fi
+         
+         here fi --->frequencies
+              xi --->observations
+
+        =sum of product of observations(xi) and their frequencies(fi) divided
+         by sum of all the frequencies(fi)
+
+ex:
+    xi values are--->5 7 16 11 9
+    fi values are--->5 10 9  7 10
+
+Arithmetic mean=
+         ∑fixi=(5x5+7x10+16x9+11x7+9x10)=406
+         ∑fi  =5+10+9+7+10 =41
+
+mean(x) =∑fixi/∑fi =406/41 
+                   =9.90 is the mean
+
+===============================================================================
+Formula's for types of mean
+
+1.Arithmetic mean
+                  
+     _
+mean(x) =∑xi/N
+
+where x1,x2,x3.......xn are the observations
+      N  is the Total number of obervations
+
+-------------------------------------------------------------
+2.Geometric mean :
+ 
+   G.m= nth sqrt(x1*x2*x3....xn)
+
+   where x1,x2,x3.......xn are the observations
+      N  is the number of obervations
+
+-------------------------------------------------------------
+3.Harmonic mean:
+
+  H.M=  n/((1/x1)+(1/x2)+(1/x3)+.....(1/xn)
+        or
+  H.M= n/∑(1/xi)
+
+=============================================================================
+
+Median: The middle value
+
+        To calculate the median-->data should be arranged in ascending order
+
+Here there are 2 cases
+
+case 1: If N(no of observations) is odd
+        Median=(n+1)/2
+     
+      ex:  3  4  4  4  8  8 10  15 27
+           <---------> |  <--------->
+                     median
+
+     here N=9
+          median=(n+1)/2
+                =(9+1)/2
+                =10/2
+                =5th value i.e 8
+         so medain=8
+
+-----------------------------------------------------------------
+case 2: If N is Even
+        median = mean of value at N/2 and (N/2)+1
+
+
+ex: if elements are--->27,3,7,4,8,4,8,4,15,10
+    Now arrange it in ascending order as--->
+
+        x:  3  4  4  4  7 8  8 10  15 27
+            <--------->      <--------->
+
+          here median= (7+8)/2 =7.5
+
+  or
+       here N=10 which is even
+            median= mean of value at(10/2 and (10/2)+1) 
+                                        5        6
+                   = mean of value at( 5th and 6th)
+                   =            (7 +8)/2
+                   =            7.5
+
+   or
+      N/2  =10/2    =5th element value--->7
+      N/2+1=10/2 +1 =6th element value--->8
+                     Now compute the mean of 5th and 6th element-->(7+8)/2
+                                                                  =7.5
+==============================================================================
+
+Median of Grouped data:
+
+median=L+((N/2 -cf)/f) x h
+
+       L----->lower limit of median class
+       N------>total number of observations
+       cf----->cummulative frequency 
+       f------->frequency of each class
+       h------->is the class size
+
+Ex: Calculate the median for the following data
+
+class -------->10-20    20-30    30-40    40-50   50-60
+
+Frequency         5       10       12       8       5
+
+solution:
+            here which is the median class----> 30-40 (middle)
+                             frequency of this->f=12
+                     upto here cf is----------->cf=15(5+10)
+            L----->lower limit of median class =30
+            L=30
+            h is the class size--->i.e 10
+   First create a table 
+
+       class        Frequency(f)       Cummulative Frequency(cf)       
+ 
+       10-20            5                    5
+       20-30           10                   15
+       30-40           12                   27
+       40-50            8                   35
+       50-60            5                   40
+                       ---
+                        40
+   N------>total number of observations= 5+10+12+8+5=40
+   N=40
+
+
+  Now N=40
+      L=30
+      cf=15
+       f=12
+       h=10
+
+median=L+((N/2 -cf)/f) x h
+      =30+((20-15)/12) x10
+      =30+(5/12) x10
+      =30+(0.41 x10)
+      =30+4.1
+      =34.1
+
+so the median value is 34.1
+
+-------------------------------------------------------------
+ex:
+
+Rohit scores-->10,30,20,40,70->arrange in order->10,20,30,40,70-->median=30
+Kohli scores-->50,70,40,10,80->Arrange in order->10,40,50,70,80-->median=50
+
+here 50% of the scores(data values) >median
+here 50% of the scores(data vaues) <median
+
+process:
+  1.Take 'n' data points
+  2.Arrange them in Ascending order
+  3.The middle element will be the median
+  4.if the datapoints are odd--->add 1 and divide by 2 (n+1)/2
+  5.If the datapoints are even-->then take average(mean) of
+                                                      i)(n/2)==>res1
+                                                     ii)(n/2)+1=>res2
+                                                        (res1+res2)/2=res3
+                                                        res3-->is the median
+
+ ex: Athlete ------->during 7 trials in a practice session(200mts)--->
+                     25.5,25.7,26.1,24.9,25.3,25.6,26.2
+
+    Arrange in order
+    Rank    Time
+     1       24.9
+     2       25.3
+     3       25.5
+     4       25.6
+     5       25.7
+     6       26.1
+     7       26.2
+
+   n=7 values---->odd
+   if odd----->(n+1)/2
+              =(7+1)/2
+              =4 ----->Rank
+  the median is---->25.6
+------------------------------------------------------
+ex:2 if n=8 --->even values
+
+
+    Rank    Time
+     1       24.9
+     2       25.3
+     3       25.5
+     4       25.6
+     5       25.7
+     6       26.1
+     7       26.2
+     8       26.4
+
+   if n=8 --->even values
+  1)n/2  ---------->8/2 =4 ----->25.6
+  2)(n/2)+1 ------->(8/2)+1=5--->25.7
+     median=(25.6+25.7)/2=25.65
+
+==============================================================================
+Mode: The value which appears most often in the dataset
+      (or) Mode is the value of observation which has maximum frequency 
+
+ex:--->6emps has------->B.Tech,M.Tech,B.Tech,M.Sc,B.Tech,B.Sc
+                       so here the mode is----->B.Tech
+                                               as it is appearing for 3 times
+
+
+Mode of un-grouped data:
+------------------------
+Goals done by a player--->2 3 3 3 5 5 9 3 4 2
+                          mode is--->3
+
+------------------------------------------------------
+ex:Find the mode of the observations-->5,3,4,3,7,3,5,4,3
+
+create a table with each observation and its frequency as
+
+xi  5   3   4   7
+fi  2   4   2   1
+
+so here which has highest frequency---->3
+                       so mode is =3
+
+-------------------------------------------------------------------
+Mode of Grouped Data
+
+  formula to find the mode of Grouped data is
+
+
+     Mode=L+[(f1-f0)/(2f1-f0-f2)]*h
+
+       L----->lower class limit of modal class
+       N------>total number of observations
+       f1----->frequency of modal class
+       f0------->frequency of the class that precceeds modal class
+       f2------->frequency of the class that succeeds modal class
+       h------->is the class size
+
+ ex: Find the mode of the below dataset 
+
+ class -------->10-20    20-30    30-40    40-50   50-60
+
+ Frequency        5        8       12        16      10
+
+
+which class has got the highest frequency---->40-50 with frequency=16
+
+so 40-50 is our modal class
+    L=40,  h=10,  f1=16, f0=12 ,f2=10
+
+ Now plugging the values in the formula
+
+ Mode=L+[(f1-f0)/(2f1-f0-f2)]*h
+     =40+[(16-12)/(2*16-12-10)]*10
+     =40+[4/10]*10
+     =40+4
+     =44
+Mode=44
+
+So the mode of the dataset is-->44
+
+=============================================================================
+hence--->
+
+    Mean------>average value
+    Median--->midpoint value
+    Mode ----->most common value
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
