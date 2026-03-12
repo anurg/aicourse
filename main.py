@@ -1,17 +1,14 @@
 import os
+from typing import TypedDict
 from dotenv import load_dotenv
 from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
+from langgraph.graph import StateGraph, END
 
 load_dotenv()
 
-# Initialize the ChatAnthropic model.
-# The API key will be automatically picked up from the ANTHROPIC_API_KEY environment variable.
-# You can specify a different model, such as "claude-3-sonnet-20240229" or "claude-3-haiku-20240307".
 model = ChatAnthropic(model="claude-sonnet-4-6", temperature=0.0)
 
-# Define a simple prompt template
 prompt = ChatPromptTemplate.from_messages(
     [
         ("system", "You are a helpful assistant that writes haikus."),
@@ -19,12 +16,24 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-# Define the output parser
-output_parser = StrOutputParser()
+# Define the graph state
+class State(TypedDict):
+    question: str
+    response: str
 
-# Create the LangChain chain
-chain = prompt | model | output_parser
+# Define the node function
+def call_model(state: State) -> State:
+    messages = prompt.format_messages(question=state["question"])
+    result = model.invoke(messages)
+    return {"question": state["question"], "response": result.content}
 
-# Invoke the chain and print the response
-response = chain.invoke({"question": "Why is the sky blue?"})
-print(response)
+# Build the graph
+graph = StateGraph(State)
+graph.add_node("call_model", call_model)
+graph.set_entry_point("call_model")
+graph.add_edge("call_model", END)
+app = graph.compile()
+
+# Invoke the graph and print the response
+result = app.invoke({"question": "Why is the sky blue?"})
+print(result["response"])
