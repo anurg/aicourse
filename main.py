@@ -1,25 +1,31 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+import os
+from dotenv import load_dotenv
+from langchain_anthropic import ChatAnthropic
 
-app = FastAPI()
-
-
-class Item(BaseModel):
-    name: str
-    price: float
-    is_offer: bool | None = None
+load_dotenv()
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+# Initialize the ChatAnthropic model.
+# The API key will be automatically picked up from the ANTHROPIC_API_KEY environment variable.
+# You can specify a different model, such as "claude-3-sonnet-20240229" or "claude-3-haiku-20240307".
+model = ChatAnthropic(model="claude-sonnet-4-6", temperature=0.0)
 
+# Define a simple prompt template
+prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are a helpful assistant that writes haikus."),
+        ("human", "{question}"),
+    ]
+)
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: str | None = None):
-    return {"item_id": item_id, "q": q}
+# Define the output parser
+output_parser = StrOutputParser()
 
+# Create the LangChain chain
+chain = prompt | model | output_parser
 
-@app.put("/items/{item_id}")
-def update_item(item_id: int, item: Item):
-    return {"item_name": item.name, "item_id": item_id}
+# Invoke the chain and print the response
+response = chain.invoke({"question": "Why is the sky blue?"})
+print(response)
