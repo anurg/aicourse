@@ -1,33 +1,25 @@
-import requests
+#https://realpython.com/python-pydantic/
 
-url = "https://api.github.com/search/repositories"
-url += "?q=language:python+sort:stars+stars:>10000"
+from pydantic_models import Employee
 
-headers = {"Accept": "application/vnd.github.v3+json"}
-r = requests.get(url,headers=headers)
-print(f"Status code: {r.status_code}")
-
-# Convert the response object to a dictionary.
-response_dict = r.json()
-
-print(response_dict.keys())
-
-print(f"Total repositories: {response_dict['total_count']}")
-print(f"Complete results: {not response_dict['incomplete_results']}")
-
-# # Explore information about the repositories.
-# repo_dicts = response_dict['items']
-# print(f"Repositories returned: {len(repo_dicts)}")
-# # Examine the first repository.
-# repo_dict = repo_dicts[0]
-# print(f"\nKeys: {len(repo_dict)}")
-# print("\nSelected information about first repository:")
-# print(f"Name: {repo_dict['name']}")
-# print(f"Owner: {repo_dict['owner']['login']}")
-# print(f"Stars: {repo_dict['stargazers_count']}")
-# print(f"Repository: {repo_dict['html_url']}")
-# print(f"Created: {repo_dict['created_at']}")
-# print(f"Updated: {repo_dict['updated_at']}")
-# print(f"Description: {repo_dict['description']}")
-# # for key in sorted(repo_dict.keys()):
-# #     print(key)
+# emp = Employee(
+#     employee_id="123",
+#     name=False,
+#     email="cdetumaexamplecom",
+#     date_of_birth="1939804-02",
+#     salary="high paying",
+#     department="PRODUCT",
+#     elected_benefits=300,
+# )
+# print(emp)
+new_employee_dict = {
+    "name": "Chris DeTuma",
+    "email": "cdetuma@example.com",
+    "date_of_birth": "1998-04-02",
+    "salary": 123_000.00,
+    "department": "IT",
+    "elected_benefits": True,
+}
+Employee.model_validate(new_employee_dict)
+json_schema= Employee.model_json_schema()
+print(json_schema)
