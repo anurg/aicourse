@@ -1,19 +1,13 @@
-from datetime import date
-from uuid import UUID, uuid4
-from enum import Enum
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
+from typing import Optional
 
-class Department(Enum):
-    HR = "HR"
-    SALES = "SALES"
-    IT = "IT"
-    ENGINEERING = "ENGINEERING"
-
-class Employee(BaseModel):
-    employee_id: UUID = uuid4()
+class User(BaseModel):
     name: str
-    email: EmailStr
-    date_of_birth: date
-    salary: float
-    department: Department
-    elected_benefits: bool
+    age: int
+    password: str
+    bio: Optional[str] = None
+
+user = User(name="Anurag", age=35, password="secret", bio=None)
+
+# Basic dump
+print(user.model_dump())
