@@ -1,13 +1,9 @@
-from pydantic import BaseModel
-from typing import Optional
+from fastapi import FastAPI, Body
+app = FastAPI()
+@app.post("/hi")
+def greet(who:str = Body(embed=True)):
+    return f"Hello? {who}?"
 
-class User(BaseModel):
-    name: str
-    age: int
-    password: str
-    bio: Optional[str] = None
-
-user = User(name="Anurag", age=35, password="secret", bio=None)
-
-# Basic dump
-print(user.model_dump())
+if __name__ =="__main__":
+    import uvicorn
+    uvicorn.run("pydantic_models:app",reload=True)
