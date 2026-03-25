@@ -1,9 +1,5 @@
-from fastapi import FastAPI, Body
+from fastapi import FastAPI, Header
 app = FastAPI()
-@app.post("/hi")
-def greet(who:str = Body(embed=True)):
-    return f"Hello? {who}?"
-
-if __name__ =="__main__":
-    import uvicorn
-    uvicorn.run("pydantic_models:app",reload=True)
+@app.post("/agent")
+def get_agent(user_agent:str = Header()):
+    return user_agent
