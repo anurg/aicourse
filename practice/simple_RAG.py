@@ -45,15 +45,12 @@ vector_store = InMemoryVectorStore(embeddings)
 ids = vector_store.add_documents(documents=chunks)
 
 retriever = vector_store.as_retriever(search_kwargs={"k": 4})
-question="What is the best practice for Mindful Productivity which helps in Procrastination? How can I practice it?"
+question="Summarize the document in 500 words!"
 
 ###prompt
 stuff_template = """Answer based on the context below.
-    
 Context: {context}
-
 Question: {question}
-
 Answer:"""
 
 from langchain_openai import ChatOpenAI
@@ -71,5 +68,11 @@ stuff_chain = (
         | stuff_prompt
         | llm
     )
-result = stuff_chain.invoke(question)
-print (result.content)
+# result = stuff_chain.invoke(question)
+# print (result.content)
+for result in stuff_chain.stream(question):
+    print(result.content, end="")
+
+
+    # TODOS - Use Chroma in-memory and Persistence beyond session for preventing embeddings multiple times.
+    # TODOS - 
