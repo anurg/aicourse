@@ -80,11 +80,8 @@ else:
 retriever = vector_store.as_retriever(search_kwargs={"k": TOP_K})
 
 stuff_template = """Answer based on the context below.
-
 Context: {context}
-
 Question: {question}
-
 Answer:"""
 
 stuff_prompt = ChatPromptTemplate.from_template(stuff_template)
